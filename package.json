@@ -2,7 +2,9 @@
   "name": "closures-workshop",
   "version": "1.0.0",
   "description": "A workshop to learn how to utilize JavaScript closures.",
+  "license": "UNLICENSED",
   "scripts": {
+    "adder": "yarn ts-node ./src/adder.ts",
     "helloWorld": "yarn ts-node ./src/helloWorld.ts",
     "logger": "yarn ts-node ./src/logger.ts"
   },
