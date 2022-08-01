@@ -4,6 +4,8 @@
   "description": "A workshop to learn how to utilize JavaScript closures.",
   "license": "UNLICENSED",
   "scripts": {
+    "memo": "yarn ts-node ./src/memo.ts",
+    "once": "yarn ts-node ./src/once.ts",
     "adder": "yarn ts-node ./src/adder.ts",
     "helloWorld": "yarn ts-node ./src/helloWorld.ts",
     "logger": "yarn ts-node ./src/logger.ts"

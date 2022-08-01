@@ -1,10 +1,17 @@
+type Priority = 'info' | 'error';
+
 function createLogger(appId: string) {
-  function logInfo(logObject: object) {
-    console.log({ appId, priority: 'info', ...logObject });
+  // Private log function
+  function log(message: string, priority: Priority) {
+    console.log({ appId, message, priority });
   }
 
-  function logError(logObject: object) {
-    console.log({ appId, priority: 'info', ...logObject });
+  function logInfo(message: string) {
+    return log(message, 'info');
+  }
+
+  function logError(message: string) {
+    return log(message, 'error');
   }
 
   return { logInfo, logError };
@@ -12,4 +19,4 @@ function createLogger(appId: string) {
 
 const myAppLogger = createLogger('rt-protections-pro-notification-lambda');
 
-myAppLogger.logError({ message: 'something went wrong!' });
+myAppLogger.logError('Something went wrong');
