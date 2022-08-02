@@ -5,8 +5,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "example-1": "yarn ts-node ./src/example-1/logger.ts",
+    "example-2": "yarn ts-node ./src/example-2/once.ts",
     "memo": "yarn ts-node ./src/memo.ts",
-    "once": "yarn ts-node ./src/once.ts",
     "adder": "yarn ts-node ./src/adder.ts",
     "helloWorld": "yarn ts-node ./src/helloWorld.ts"
   },
