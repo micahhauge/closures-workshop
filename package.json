@@ -4,11 +4,10 @@
   "description": "A workshop to learn how to utilize JavaScript closures.",
   "license": "UNLICENSED",
   "scripts": {
+    "helloWorld": "yarn ts-node ./src/hello-world/helloWorld.ts",
     "example-1": "yarn ts-node ./src/example-1/tutorial.ts",
     "http-client": "yarn ts-node ./src/example-1/http-client.ts",
-    
     "example-2": "yarn ts-node ./src/example-2/tutorial.ts",
-    
     "example-3": "yarn ts-node ./src/example-3/tutorial.ts",
     "factorial": "yarn ts-node ./src/example-3/factorial.ts"
   },
