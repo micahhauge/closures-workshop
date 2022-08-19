@@ -10,7 +10,13 @@ yarn install
 
 ## Workshop Layout
 
-There's three examples in this workshop. For each workshop, read the instructions from the `.md` file and follow along in the `tutorial.ts` file. Once you've finished the tutorial, try out the accompanying now-your-turn file. There's a test file you can check your solution against to make sure you're on the right path!
+This workshop has three sections:
+
+1. An `AcademicExamples` that we will reference during the presentation
+2. An `Examples` folder that contains practical examples and challenges to help you learn.
+3. A `playground.ts` file where you can run any code you like with `yarn start`
+
+Within the practical examples, there are 3 workshop. For each workshop, read the instructions from the `.md` file and follow along in the `tutorial.ts` file. Once you've finished the tutorial, try out the accompanying now-your-turn file. There's a test file you can check your solution against to make sure you're on the right path!
 
 Checkout the instructions for each example
 
