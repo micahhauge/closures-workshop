@@ -4,7 +4,9 @@
   "description": "A workshop to learn how to utilize JavaScript closures.",
   "license": "UNLICENSED",
   "scripts": {
-    "helloWorld": "yarn ts-node ./src/hello-world/helloWorld.ts",
+    "start": "yarn ts-node ./src/playground.ts",
+    "counter": "yarn ts-node ./src/AcademicExamples/4_counter.ts",
+    "rectangle": "yarn ts-node ./src/AcademicExamples/5_rectangle.ts",
     "example-1": "yarn ts-node ./src/example-1/tutorial.ts",
     "http-client": "yarn ts-node ./src/example-1/http-client.ts",
     "example-2": "yarn ts-node ./src/example-2/tutorial.ts",
