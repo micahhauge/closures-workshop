@@ -5,6 +5,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "yarn ts-node ./src/playground.ts",
+    "nestedScope": "yarn ts-node ./src/AcademicExamples/3_nestedScope.ts",
     "counter": "yarn ts-node ./src/AcademicExamples/4_counter.ts",
     "rectangle": "yarn ts-node ./src/AcademicExamples/5_rectangle.ts",
     "example-1": "yarn ts-node ./src/example-1/tutorial.ts",
