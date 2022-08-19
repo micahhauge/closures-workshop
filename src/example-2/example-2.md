@@ -2,7 +2,7 @@
 
 Understanding that you can reference variables in the outer scope from an inner scope is pretty simple to grasp. Let's heat this up a little, how would you solve this problem:
 
-Create a function called `once` that takes a function and that function can only be invoked one time, if you call it more than once it throws an error.
+Create a function called `once` that takes a function and that function can only be invoked one time, if you call it more than once it doesn't do anything.
 
 Here's what that means:
 
@@ -14,7 +14,7 @@ sayHello(); // Already called
 sayHello(); // Already called
 ```
 
-Maybe you're thinking _"Well I could create a function that has stores a count and any time I call it, I'd increment the count. It would print hello if the count is zero and log an error if it's greater than one"_.
+Maybe you're thinking _"Well I could create a function that stores a count and any time I call it, I'd increment the count. It would print hello if the count is zero and log an error if it's >= 1"_.
 
 Will that work without closure? No. But why? 
 
@@ -30,17 +30,21 @@ function once(func: VoidFn): VoidFn {
 }
 ```
 
-Instead of a count, make it simpler with a boolean in our outer scope (you'll see why in a second):
+Start easy and setup a closure that always calls `func`:
 
 ```ts
 type VoidFn = () => void;
 
 function once(func: VoidFn): VoidFn {
-  let alreadyCalled = false;
+  function inner() {
+    func();
+  }
+
+  return inner;
 }
 ```
 
-Now for the inner scope, return a function that invokes `func` regardless of how many times it is called:
+Now instead of a count, use a boolean in the outer scope (you'll see why in a second):
 
 ```ts
 type VoidFn = () => void;
@@ -48,9 +52,11 @@ type VoidFn = () => void;
 function once(func: VoidFn): VoidFn {
   let alreadyCalled = false;
 
-  return () => {
+  function inner() {
     func();
   }
+
+  return inner;
 }
 ```
 
@@ -62,15 +68,17 @@ type VoidFn = () => void;
 function once(func: VoidFn): VoidFn {
   let alreadyCalled = false;
 
-  return () => {
+  function inner() {
     if (alreadyCalled) {
       console.log('Already called');
       return;
     }
 
     alreadyCalled = true;
-    return func();
+    func();
   }
+
+  return inner;
 }
 ```
 
