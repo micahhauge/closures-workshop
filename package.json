@@ -14,7 +14,7 @@
     "factorial": "yarn ts-node ./src/example-3/factorial.ts"
   },
   "devDependencies": {
-    "@types/jest": "^28.1.6",
+    "@types/jest": "^28.1.7",
     "@types/node": "^18.6.3",
     "jest": "^28.1.3",
     "ts-jest": "^28.0.7",
