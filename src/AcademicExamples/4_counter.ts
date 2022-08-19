@@ -1,6 +1,8 @@
 // Run this file with "yarn counter"
 
-function createCounter(count: number) {
+function createCounter(initialCount: number) {
+  let count = initialCount;
+
   function increment() {
     count++;
     console.log(`Counter is now ${count}`);
