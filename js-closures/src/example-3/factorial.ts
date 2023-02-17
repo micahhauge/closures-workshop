@@ -20,3 +20,7 @@
 export function memoizedFactorial(): (num: number) => number {
 
 }
+
+const f = memoizedFactorial();
+f(5);
+f(10);

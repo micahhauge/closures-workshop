@@ -124,6 +124,6 @@ The wishful code from the beginning will now work:
 ```ts
 const myAppLogger = createLogger('application-id');
 
-myAppLogger.logInfo('The user logged in'); // => console.log({ applicationId: 'application-id', message: 'The user logged in', priority: 'info' });
-myAppLogger.logError('Something went wrong'); // => console.log({  applicationId: 'application-id', message: 'Something went wrong', priority: 'error' });
+myAppLogger.logInfo('The user logged in');    // => console.log({ applicationId: 'application-id', priority: 'info',  message: 'The user logged in'  });
+myAppLogger.logError('Something went wrong'); // => console.log({ applicationId: 'application-id', priority: 'error', message: 'Something went wrong' });
 ```

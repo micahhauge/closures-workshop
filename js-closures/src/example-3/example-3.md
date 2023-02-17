@@ -108,7 +108,28 @@ function memo(func: (n: number) => number) {
 }
 ```
 
-Run the wishful code from the beginning 
+To DRY some things up, our final code will look like this:
+
+```ts
+function memo(func: (n: number) => number) {
+  const cache: Record<number, number> = {};
+
+  function memoizedFunction(n: number) {
+    if (cache[n] !== undefined) {
+      console.log(`Returning cached value for func(${n})`);
+    } else {
+      console.log(`Calling expensive function func(${n})`);
+      cache[n] = func(n);
+    }
+
+    return cache[n];
+  }
+
+  return memoizedFunction;
+}
+```
+
+Run the wishful code from the beginning
 
 ```bash
 yarn example-3

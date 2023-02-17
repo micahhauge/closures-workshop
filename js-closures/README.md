@@ -20,6 +20,6 @@ Within the practical examples, there are 3 workshops. For each workshop, read th
 
 Checkout the instructions for each example
 
-- [Example 1: Custom HTTP Client](./src/example-1/example-1.md)
+- [Example 1: Custom Logger](./src/example-1/example-1.md)
 - [Example 2: Only Call a Function Once](./src/example-2/example-2.md)
 - [Example 3: Memoizing Expensive Functions](./src/example-3/example-3.md)
